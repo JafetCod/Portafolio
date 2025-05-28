@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Productos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f8f8f8;
+        }
+
+        .banner {
+            background-color: #ff5722;
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .banner h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .banner p {
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .gallery-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .gallery-item {
+            flex: 0 0 calc(33.33% - 10px);
+            margin-bottom: 20px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            opacity: 0.9; /* 10% más de opacidad al pasar el cursor */
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #777;
+            font-size: 0.9rem;
+        }
+
+        .btn-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .btn {
+            background-color: #ff5722;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1rem;
+            cursor: pointer;
+            text-transform: uppercase;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        /* Media queries para diseño responsivo */
+        /* Extra - más de 1200px (diseño por defecto) */
+
+        /* Grande - menos de 1200px */
+        @media (max-width: 1200px) {
+            .gallery-item {
+                flex: 0 0 calc(33.33% - 10px);
+            }
+        }
+
+        /* Mediano - menos de 900px */
+        @media (max-width: 900px) {
+            .gallery-item {
+                flex: 0 0 calc(50% - 10px);
+            }
+            .banner h1 {
+                font-size: 2rem;
+            }
+        }
+
+        /* Pequeño - menos de 480px */
+        @media (max-width: 480px) {
+            .gallery-item {
+                flex: 0 0 100%;
+            }
+            .banner h1 {
+                font-size: 1.5rem;
+            }
+            .banner p {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="banner">
+        <h1>Cree excelentes productos</h1>
+        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+    </section>
+
+    <div class="gallery-container">
+        <div class="gallery">
+            <!-- Fila 1 -->
+            <div class="gallery-item">
+                <img src="https://images.pexels.com/photos/1918291/pexels-photo-1918291.jpeg" alt="Sala de estar con sofá azul">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.pexels.com/photos/1743229/pexels-photo-1743229.jpeg" alt="Sala pequeña con sillón gris">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.pexels.com/photos/1080721/pexels-photo-1080721.jpeg" alt="Cocina moderna blanca">
+            </div>
+            
+            <!-- Fila 2 -->
+            <div class="gallery-item">
+                <img src="https://images.pexels.com/photos/667838/pexels-photo-667838.jpeg" alt="Sala minimalista con planta">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.pexels.com/photos/4050318/pexels-photo-4050318.jpeg" alt="Dormitorio con tonos neutros">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.pexels.com/photos/3653849/pexels-photo-3653849.jpeg" alt="Oficina con pared de madera">
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Imágenes de Freepik</p>
+    </div>
+
+    <div class="btn-container">
+        <a href="#" class="btn">Ver más</a>
+    </div>
+</body>
+</html>
